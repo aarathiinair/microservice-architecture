@@ -1,0 +1,335 @@
+Task:
+
+Given an INPUT trigger name and a DATASET (JSONL: one JSON object per line) containing fields:
+
+- trigger_name
+
+- resource_name
+
+- priority
+
+- type
+
+- recommended_action
+
+ 
+
+Return exactly ONE JSON object from the dataset that best matches the input trigger name according to the rules below.
+
+ 
+
+Important Constraints:
+
+- Use ONLY the dataset included in this prompt; do NOT use cache or previous answers.
+
+- If recommended_action is missing or equals the string "nan", return it as an empty string "".
+
+ 
+
+Matching Rules:
+
+1) Perform a LIKE-style match of the input against each row's trigger_name:
+
+   - Case-insensitive
+
+   - Trim leading/trailing whitespace on the input before matching
+
+   - A LIKE match is true if the dataset's trigger_name appears as a substring within the normalized input OR vice versa.
+
+2) If multiple rows match, choose the one with the longest matched span (most specific).
+
+3) If there is NO match, return this exact JSON (no extra text):
+
+{
+
+  "trigger_name": "<input>",
+
+  "resource_name": "",
+
+  "priority": "",
+
+  "type": "",
+
+  "recommended_action": ""
+
+}
+
+ 
+
+Output Format:
+
+- Return exactly ONE JSON object (no surrounding prose), with fields:
+
+  - trigger_name
+
+  - resource_name
+
+  - priority
+
+  - type
+
+  - recommended_action
+
+ 
+
+Steps to Follow:
+
+1) Normalize the input: trim whitespace and lowercase for matching (preserve original case in output fields from the dataset).
+
+2) For each dataset row, compare normalized strings and determine if they LIKE-match. If yes, compute the length of the matched span.
+
+3) Select the row with the longest matched span. If ties occur, prefer the row with the longer trigger_name; if still tied, pick the first occurrence.
+
+4) Output the JSON for the selected row, normalizing recommended_action to "" when missing or "nan".
+
+ 
+
+Inputs to substitute in this prompt when you run it:
+
+- INPUT trigger name: <<INPUT_TRIGGER_NAME>>
+
+- DATASET (JSONL content pasted below):
+
+<<DATASET_JSONL>>
+
+ 
+
+ 
+
+{"trigger_name":"Machines: Computer Down SDN_TS SGD","resource_name":"CITRIX","priority":"P2","type":"Actionable","recommended_action":"Check machine in Citrix DC/ControlUp"}
+
+{"trigger_name":"Machines: Computer Down ROT_TS SKZ","resource_name":"CITRIX","priority":"P2","type":"Actionable","recommended_action":"Check machine in Citrix DC/ControlUp"}
+
+{"trigger_name":"Machines: Computer Down SDN_TS TEST","resource_name":"CITRIX","priority":"P2","type":"Actionable","recommended_action":"Check machine in Citrix DC/ControlUp"}
+
+{"trigger_name":"Machines: Computer Down SDN_TS WW","resource_name":"CITRIX","priority":"P2","type":"Actionable","recommended_action":"Check machine in Citrix DC/ControlUp"}
+
+{"trigger_name":"Machines: Computer Down SDN_TS EXT","resource_name":"CITRIX","priority":"P2","type":"Actionable","recommended_action":"Check machine in Citrix DC/ControlUp"}
+
+{"trigger_name":"Machines: Computer Down SDN_TS CN","resource_name":"CITRIX","priority":"P2","type":"Actionable","recommended_action":"Check machine in Citrix DC/ControlUp"}
+
+{"trigger_name":"Machines: Computer Down SDN_TS ALC","resource_name":"CITRIX","priority":"P2","type":"Actionable","recommended_action":"Check machine in Citrix DC/ControlUp"}
+
+{"trigger_name":"Machines: Computer Down SDN_TS SDN","resource_name":"CITRIX","priority":"P2","type":"Actionable","recommended_action":"Check machine in Citrix DC/ControlUp"}
+
+{"trigger_name":"Machines: Computer Down AppV","resource_name":"CITRIX","priority":"P1","type":"Actionable","recommended_action":"Check machine in VMware / Control Up"}
+
+{"trigger_name":"Machines: Computer Down ROT_TS Test","resource_name":"CITRIX","priority":"P2","type":"Actionable","recommended_action":"Check machine in Citrix DC/ControlUp"}
+
+{"trigger_name":"Machines: Computer Down ROT_TS ROT","resource_name":"CITRIX","priority":"P2","type":"Actionable","recommended_action":"Check machine in Citrix DC/ControlUp"}
+
+{"trigger_name":"Machines: Computer Down SDN_TS SYR","resource_name":"CITRIX","priority":"P2","type":"Actionable","recommended_action":"Check machine in Citrix DC/ControlUp"}
+
+{"trigger_name":"Machines: Disk Queue greater than or equal 1","resource_name":"CITRIX","priority":"P1","type":"Actionable","recommended_action":"Check and monitor disk queue"}
+
+{"trigger_name":"Machines: Memory Utilization greater than or equal 95%","resource_name":"CITRIX","priority":"P1","type":"Actionable","recommended_action":"Check and monitor memory"}
+
+{"trigger_name":"Machines: CPU greater than or equal 95%","resource_name":"CITRIX","priority":"P1","type":"Actionable","recommended_action":"Check and monitor cpu"}
+
+{"trigger_name":"Machines: Less 5GB AND less 10 Percent","resource_name":"CITRIX","priority":"P2","type":"Actionable","recommended_action":"Check disk storage"}
+
+{"trigger_name":"License Service Down","resource_name":"CITRIX","priority":"P1","type":"Actionable","recommended_action":"Restart the Server / Service"}
+
+{"trigger_name":"License Service Up","resource_name":"CITRIX","priority":"Informational","type":"Informational","recommended_action":"Close Ticket automatically"}
+
+{"trigger_name":"Infrastructur Machines Computer Down Infrastructure","resource_name":"CITRIX","priority":"P1","type":"Actionable","recommended_action":"Check the machines"}
+
+{"trigger_name":"FSLogix Profile corrupted","resource_name":"CITRIX","priority":"P3","type":"Actionable","recommended_action":"Repair profile"}
+
+{"trigger_name":"FSLogix Error","resource_name":"CITRIX","priority":"P3","type":"Actionable","recommended_action":"check fslogix error"}
+
+{"trigger_name":"WEM s00115 Event 3 Kerberos","resource_name":"CITRIX","priority":"Informational","type":"Informational","recommended_action":"check kerberos"}
+
+{"trigger_name":"WEM Service Down","resource_name":"CITRIX","priority":"Informational","type":"Informational","recommended_action":"check WEM service Cluster"}
+
+{"trigger_name":"WEM Service Up","resource_name":"CITRIX","priority":"Informational","type":"Informational","recommended_action":""}
+
+{"trigger_name":"Monitor Delivery Controller Service Down","resource_name":"CITRIX","priority":"P1","type":"Actionable","recommended_action":"Check DC Service on respective Server"}
+
+{"trigger_name":"Monitor Delivery Controller Service Up","resource_name":"CITRIX","priority":"Informational","type":"Informational","recommended_action":"Close Ticket automatically"}
+
+{"trigger_name":"PVS Service Down","resource_name":"CITRIX","priority":"P1","type":"Actionable","recommended_action":"Check PVS Service Server"}
+
+{"trigger_name":"PVS Service Up","resource_name":"CITRIX","priority":"Informational","type":"Informational","recommended_action":"Close Ticket automatically"}
+
+{"trigger_name":"Broker cannot find any avail VM","resource_name":"CITRIX","priority":"Informational","type":"Informational","recommended_action":""}
+
+{"trigger_name":"Storefront Test","resource_name":"CITRIX","priority":"Informational","type":"Informational","recommended_action":""}
+
+{"trigger_name":"VDA: D:\ Drive Free Space less than or equal 2 GB","resource_name":"CITRIX","priority":"Informational","type":"Informational","recommended_action":"Reboot TS"}
+
+{"trigger_name":"VDA unregistered","resource_name":"CITRIX","priority":"Informational","type":"Informational","recommended_action":"Reboot VDA"}
+
+{"trigger_name":"Error MS RDP TS Lizenz Server","resource_name":"CITRIX","priority":"P2","type":"Actionable","recommended_action":"Check RDP Lizenz Server"}
+
+{"trigger_name":"WinLogon Error","resource_name":"CITRIX","priority":"P3","type":"Actionable","recommended_action":"Check Terminal Server Login"}
+
+{"trigger_name":"ESX Hypervisor Maintenance on","resource_name":"Hypervisor / VMware","priority":"Informational","type":"Informational","recommended_action":""}
+
+{"trigger_name":"ESX Hypervisor Maintenance off","resource_name":"Hypervisor / VMware","priority":"Informational","type":"Informational","recommended_action":""}
+
+{"trigger_name":"Hypervisor: If vCPU/pCPU Ratio greater or equal 3 (vCenter)","resource_name":"Hypervisor / VMware","priority":"Informational","type":"Informational","recommended_action":""}
+
+{"trigger_name":"Hypervisor: Consumed Memory greater than or equal 95% (vCenter)","resource_name":"Hypervisor / VMware","priority":"P1","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"Hypervisor: Storage Total Latency greater than or equal 100ms (vCenter)","resource_name":"Hypervisor / VMware","priority":"Informational","type":"Informational","recommended_action":""}
+
+{"trigger_name":"Hypervisor: Machines Computer Down Hypervisors","resource_name":"Hypervisor | VMware","priority":"P2","type":"Actionable","recommended_action":"View Status in vCenter"}
+
+{"trigger_name":"Hypervisor: Memory Balooning greater than or equal 10MB (vCenter)","resource_name":"Hypervisor | VMware","priority":"Informational","type":"Informational","recommended_action":""}
+
+{"trigger_name":"Hypervisor: CPU Usage greater than or equal 95% (vCenter)","resource_name":"Hypervisor | VMware","priority":"Informational","type":"Informational","recommended_action":""}
+
+{"trigger_name":"VMware Horizon Connection Server Health Monitoring","resource_name":"Hypervisor | VMware","priority":"Informational","type":"Informational","recommended_action":""}
+
+{"trigger_name":"VMware Horizon Connection Server Events","resource_name":"Hypervisor | VMware","priority":"Informational","type":"Informational","recommended_action":""}
+
+{"trigger_name":"VMware Horizon Connection Server Process Monitoring","resource_name":"Hypervisor | VMware","priority":"Informational","type":"Informational","recommended_action":""}
+
+{"trigger_name":"SAP-Basis Machines: Computer Down","resource_name":"SAP","priority":"P1","type":"Actionable","recommended_action":"View Status in vCenter"}
+
+{"trigger_name":"SAP-Basis Machines: Memory Utilization greater than or equal 95%","resource_name":"SAP","priority":"P2","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"SAP-Basis Machines: Disk Queue greater than or equal 1","resource_name":"SAP","priority":"P2","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"SAP-Basis Machines: CPU greater than or equal 95%","resource_name":"SAP","priority":"P2","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"SAP-Basis Less 5GB AND less 10 Percent","resource_name":"SAP","priority":"P2","type":"Actionable","recommended_action":"Check Disk Space"}
+
+{"trigger_name":"SAP-SD Machines: Memory Utilization greater than or equal 95%","resource_name":"SAP","priority":"P1","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"SAP-SD Machines: Computer Down","resource_name":"SAP","priority":"P2","type":"Actionable","recommended_action":"View Status in vCenter"}
+
+{"trigger_name":"SAP-SD Machines: CPU greater than or equal 95%","resource_name":"SAP","priority":"P2","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"SAP-SD Machines: Disk Queue greater than or equal 1","resource_name":"SAP","priority":"P2","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"SAP-SD Less 5GB AND less 10 Percent","resource_name":"SAP","priority":"P2","type":"Actionable","recommended_action":"Check Disk Space"}
+
+{"trigger_name":"SAP-PP Machines: Computer Down","resource_name":"SAP","priority":"P1","type":"Actionable","recommended_action":"View Status in vCenter"}
+
+{"trigger_name":"SAP-PP Machines: Memory Utilization greater than or equal 95%","resource_name":"SAP","priority":"P2","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"SAP-PP Machines: Disk Queue greater than or equal 1","resource_name":"SAP","priority":"P2","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"SAP-PP Machines: CPU greater than or equal 95%","resource_name":"SAP","priority":"P2","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"SAP-PP Less 5GB AND less 10 Percent","resource_name":"SAP","priority":"P2","type":"Actionable","recommended_action":"Check Disk Space"}
+
+{"trigger_name":"SAP-PP Machine Waage","resource_name":"SAP","priority":"P1","type":"Actionable","recommended_action":"View Status in vCenter"}
+
+{"trigger_name":"SAP-SW Service Jira Tomcat Down","resource_name":"SAP","priority":"P2","type":"Actionable","recommended_action":"Check Tomcat Servers"}
+
+{"trigger_name":"SAP-SW Machines: CPU greater than or equal 95%","resource_name":"SAP","priority":"P1","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"SAP-SW Machines: Computer Down","resource_name":"SAP","priority":"P2","type":"Actionable","recommended_action":"View Status in vCenter"}
+
+{"trigger_name":"SAP-SW Machines: Memory Utilization greater than or equal 95%","resource_name":"SAP","priority":"P2","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"SAP-SW Machines: Disk Queue greater than or equal 1","resource_name":"SAP","priority":"P2","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"SAP-SW Less 5GB AND less 10 Percent","resource_name":"SAP","priority":"P2","type":"Actionable","recommended_action":"Check Disk Space"}
+
+{"trigger_name":"SAP-BASIS Proc ended BELLIN Client Transport.exe","resource_name":"SAP","priority":"Informational","type":"Informational","recommended_action":"View Status in vCenter"}
+
+{"trigger_name":"OI-IBS Exchange Machines: Computer Down Exchange","resource_name":"OI-IBS","priority":"P1","type":"Actionable","recommended_action":"View Status in vCenter"}
+
+{"trigger_name":"OI-IBS Exchange Logical Disk Advanced Trigger","resource_name":"OI-IBS","priority":"P2","type":"Actionable","recommended_action":"Check disk utilization"}
+
+{"trigger_name":"OI-IBS Exchange DB Schwenk V02","resource_name":"OI-IBS","priority":"P2","type":"Actionable","recommended_action":"Check all Exchange Servers"}
+
+{"trigger_name":"OI-IBS Exchange DB Schwenk","resource_name":"OI-IBS","priority":"P2","type":"Actionable","recommended_action":"Check all Exchange Servers"}
+
+{"trigger_name":"OI-IBS Exchange Memory / CPU Monitor","resource_name":"OI-IBS","priority":"P2","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"OI-IBS Exchange Fehler Zustellung Event ID 15006 V03","resource_name":"OI-IBS","priority":"P1","type":"Actionable","recommended_action":"Check disk utilization"}
+
+{"trigger_name":"OI-IBS Exchange Fehler Zustellung Event ID 15004","resource_name":"OI-IBS","priority":"P1","type":"Actionable","recommended_action":"Check disk utilization"}
+
+{"trigger_name":"OI-IBS Backup Machines: Disk Queue greater than or equal 21","resource_name":"OI-IBS","priority":"P2","type":"Actionable","recommended_action":"Check disk queue"}
+
+{"trigger_name":"OI-IBS Backup Machines: Memory Utilization greater than or equal 95%","resource_name":"OI-IBS","priority":"P2","type":"Actionable","recommended_action":"Check memory usage"}
+
+{"trigger_name":"OI-IBS Backup Machines: Computer Down","resource_name":"OI-IBS","priority":"P2","type":"Actionable","recommended_action":"View Status in vCenter"}
+
+{"trigger_name":"OI-IBS Backup Machines: CPU greater than or equal 95%","resource_name":"OI-IBS","priority":"P2","type":"Actionable","recommended_action":"Check cpu usage"}
+
+{"trigger_name":"OI-IBS Backup Machines: Less 15 GB AND less 10 Percent","resource_name":"OI-IBS","priority":"P2","type":"Actionable","recommended_action":"Check disk storage"}
+
+{"trigger_name":"OI-IBS Backup Proxy: Less 5 GB on Disk c:\","resource_name":"OI-IBS","priority":"P2","type":"Actionable","recommended_action":"Check disk storage"}
+
+{"trigger_name":"OI-IBS DB Development Less 5GB AND less 10 Percent","resource_name":"OI-IBS","priority":"P1","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"OI-IBS DB Development Machines: Computer Down","resource_name":"OI-IBS","priority":"P2","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"OI-IBS-OWI Printserver Fehler Zustellung Event ID 4009","resource_name":"OI-IBS","priority":"Informational","type":"Informational","recommended_action":""}
+
+{"trigger_name":"OI-IBS-OWI Machines: CPU greater than or equal 95%","resource_name":"OI-IBS","priority":"P1","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"OI-IBS-OWI Machines: Computer Down","resource_name":"OI-IBS","priority":"P2","type":"Actionable","recommended_action":"View Status in vCenter"}
+
+{"trigger_name":"OI-IBS-OWI Machines: Disk Queue greater than or equal 5","resource_name":"OI-IBS","priority":"P2","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"OI-IBS-OWI Machines: Memory Utilization greater than or equal 95%","resource_name":"OI-IBS","priority":"P2","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"OI-IBS-OWI Less 5GB AND less 10 Percent","resource_name":"OI-IBS","priority":"P2","type":"Actionable","recommended_action":"Check Disk Space"}
+
+{"trigger_name":"OI-RDA - WIS-Service Stopped","resource_name":"OI-RDA","priority":"P1","type":"Actionable","recommended_action":"Check if DESDN16110 is still running/ reachable"}
+
+{"trigger_name":"OI-RDA - WIS-Service Started","resource_name":"OI-RDA","priority":"P2","type":"Actionable","recommended_action":"Check WIS Web Application"}
+
+{"trigger_name":"OI-RDA - ShopfloorEngine-PR3-Service Stopped","resource_name":"OI-RDA","priority":"P1","type":"Actionable","recommended_action":"Check if DEROT02529 is running/ reachable"}
+
+{"trigger_name":"OI-RDA - ShopfloorEngine-PR3-Service Started","resource_name":"OI-RDA","priority":"P2","type":"Actionable","recommended_action":"Check if ShopfloorEngine is working"}
+
+{"trigger_name":"OI-RDA Less 5GB AND less 10 Percent","resource_name":"OI-RDA","priority":"P2","type":"Actionable","recommended_action":"Check disk storage"}
+
+{"trigger_name":"OI-RDA Machines: Disk Queue greater than or equal 1","resource_name":"OI-RDA","priority":"P1","type":"Actionable","recommended_action":"Please check and monitor disk queue"}
+
+{"trigger_name":"OI-RDA Machines: Memory Utilization greater than or equal 95%","resource_name":"OI-RDA","priority":"P1","type":"Actionable","recommended_action":"Please check and monitor memory"}
+
+{"trigger_name":"OI-RDA Machines: Computer Down","resource_name":"OI-RDA","priority":"P1","type":"Actionable","recommended_action":"View Status in vCenter"}
+
+{"trigger_name":"OI-RDA Machines: CPU greater than or equal 95%","resource_name":"OI-RDA","priority":"P1","type":"Actionable","recommended_action":"Please check and monitor cpu"}
+
+{"trigger_name":"OI-TC Machines: CPU greater than or equal 95%","resource_name":"OI-TC","priority":"P2","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"OI-TC Machines: Computer Down","resource_name":"OI-TC","priority":"P1","type":"Actionable","recommended_action":"View Status in vCenter"}
+
+{"trigger_name":"OI-TC Machines: Memory Utilization greater than or equal 95%","resource_name":"OI-TC","priority":"P2","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"OI-TC Machines: Disk Queue greater than or equal 1","resource_name":"OI-TC","priority":"P2","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"OI-TC Less 5GB AND less 10 Percent","resource_name":"OI-TC","priority":"P1","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"OI-SQL Machines: Disk Queue greater than or equal 1","resource_name":"OI-SQL","priority":"P1","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"OI-SQL Machines: Computer Down","resource_name":"OI-SQL","priority":"P2","type":"Actionable","recommended_action":"View Status in vCenter"}
+
+{"trigger_name":"OI-SQL Machines: Memory Utilization greater than or equal 95%","resource_name":"OI-SQL","priority":"P2","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"OI-SQL Machines: CPU greater than or equal 95%","resource_name":"OI-SQL","priority":"P2","type":"Actionable","recommended_action":"Check System Utilization"}
+
+{"trigger_name":"OI-SQL Less 5GB AND less 10 Percent","resource_name":"OI-SQL","priority":"P2","type":"Actionable","recommended_action":"Check Disk Space"}
+
+{"trigger_name":"OI-ROT - XFrame Service Down","resource_name":"OI-ROT","priority":"P3","type":"Actionable","recommended_action":"Check Xframe Service"}
+
+{"trigger_name":"OI-ROT - Xframe Service Up","resource_name":"OI-ROT","priority":"P3","type":"Actionable","recommended_action":"Check Xframe Service"}
+
+{"trigger_name":"ADC Storefront LB degraded","resource_name":"ADC","priority":"P2","type":"Actionable","recommended_action":"Check Service"}
+
+{"trigger_name":"ADC Storefront LB restored","resource_name":"ADC","priority":"Informational","type":"Informational","recommended_action":"Close Ticket automatically"}
+
+{"trigger_name":"ADC NetScaler Schwenk","resource_name":"ADC","priority":"Informational","type":"Informational","recommended_action":""}
+
+{"trigger_name":"ADC: Machines Computer Down NetScaler Appliances","resource_name":"ADC","priority":"P1","type":"Actionable","recommended_action":"View Status in vCenter"}
+
+{"trigger_name":"ADC WEM Services LB degraded","resource_name":"ADC","priority":"P1","type":"Actionable","recommended_action":"Check Service"}
+
+{"trigger_name":"ADC WEM Services LB restored","resource_name":"ADC","priority":"Informational","type":"Informational","recommended_action":"Close Ticket automatically"}
+
+{"trigger_name":"ADC Certificate expiration warning","resource_name":"ADC","priority":"P3","type":"Actionable","recommended_action":"Create new Certificate"}
+
+{"trigger_name":"ControlUp Machines: Computer Down ControlUp","resource_name":"ControlUp","priority":"P1","type":"Actionable","recommended_action":"Check machines"}
+
+{"trigger_name":"Citrix XenDesktop Error Events","resource_name":"Sonstige","priority":"P2","type":"Actionable","recommended_action":"Check Delivery Controller"}
