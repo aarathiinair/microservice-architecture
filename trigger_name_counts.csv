@@ -1,0 +1,138 @@
+Original_Trigger_name;Derived_Trigger_Name
+CITRIX Machines: Computer Down SDN_TS SGD;OI-IBS-OWI Machines: Computer Down 
+OI-TC Machines: CPU greater than or equal 95%;ESX Hypervisor Maintenance off 
+SAP-Basis Machines: Computer Down;OI-IBS-OWI Machines: CPU greater than or equal 95% 
+CITRIX License Service up;Application Servers Machines: Computer Down 
+CITRIX Infrastructur Machines Computer Down Infrastructure;OI-IBS Backup Machines: Computer Down 
+ESX Hypervisor Maintenance on;CITRIX Machines: Disk Queue greater than or equal 1 
+Application Servers Less 5GB AND less 10 Percent;CITRIX Infrastructur Machines Computer Down Infrastructure 
+Hypervisor: If vCPU/pCPU Ratio greater or equal 3 (vCenter);CITRIX Machines: Computer Down ROT_TS ROT 
+OI-IBS Exchange Machines: Computer Down Exchange;Hypervisor: If vCPU/pCPU Ratio greater or equal 3 (vCenter) 
+OI-TC Machines: Computer Down;OI-IBS Backup Machines: Memory Utilization greater than or equal 95% 
+Hypervisor: Consumed Memory greater than or equal 95% (vCenter);ESX Hypervisor Maintenance on 
+OI-IBS DB Development Less 5GB AND less 10 Percent;CITRIX Machines: Computer Down ROT_TS SKZ 
+OI-ROT - XFrame Service Down;SAP-PP Machines: Computer Down 
+SAP-Basis Machines: Memory Utilization greater than or equal 95%;CITRIX Machines: Computer Down SDN_TS SDN 
+OI-RDA - WIS-Service Stopped;CITRIX PVS Service up 
+OI-SQL Machines: Disk Queue greater than or equal 1;OI-IBS Backup Machines: CPU greater than or equal 95% 
+SAP-PP Machines: Computer Down;OI-RDA Machines: Computer Down 
+CITRIX WEM s00115 Event 3 Kerberos;OI-IBS-OWI Machines: Disk Queue greater than or equal 5 
+SAP-SD Machines: Memory Utilization greater than or equal 95%;CITRIX Machines: Computer Down SDN_TS CN 
+OI-RDA Less 5GB AND less 10 Percent;CITRIX Machines: Less 5GB AND less 10 Percent 
+Hypervisor: Storage Total Latency greater than or equal 100ms (vCenter);CITRIX Machines: CPU greater than or equal 95% 
+OI-RDA - WIS-Service Started;OI-RDA Machines: Disk Queue greater than or equal 1 
+OI-IBS Backup Machines: Disk Queue greater than or equal 21;CITRIX Machines: Computer Down ROT_TS Test 
+Service Trigger Scoutbees-Services;CITRIX Monitor Delivery Controller Service Up 
+ADC Storefront LB degraded;OI-RDA Machines: CPU greater than or equal 95% 
+OI-IBS Exchange Logical Disk Advanced Trigger;CITRIX PVS Services down 
+OI-IBS-OWI Printserver Fehler Zustellung Event ID 4009;OI-IBS DB Development Machines: Computer Down 
+Windows Event matching a custom filter;OI-RDA Less 5GB AND less 10 Percent 
+OI-IBS Backup Proxy: Less 5 GB on Disk c:\;OI-IBS Backup Machines: Less 15 GB AND less 10 Percent 
+OI-IBS-OWI Machines: CPU greater than or equal 95%;CITRIX Machines: Computer Down SDN_TS WW 
+CITRIX Machines: Disk Queue greater than or equal 1;OI-RDA Machines: Memory Utilization greater than or equal 95% 
+SAP-PP Machines: Memory Utilization greater than or equal 95%;CITRIX Machines: Computer Down SDN_TS SYR 
+CITRIX FSLogix Profile corrupted;CITRIX WEM Service up 
+OI-IBS Backup Machines: Memory Utilization greater than or equal 95%;Application Servers Less 5GB AND less 10 Percent 
+CITRIX Machines: Computer Down ROT_TS SKZ;CITRIX Machines: Computer Down SDN_TS ALC 
+Hypervisor: Machines Computer Down Hypervisors;CITRIX Machines: Memory Utilization greater than or equal 95% 
+OI-RDA - ShopfloorEngine-PR3-Service Started;CITRIX Machines: Computer Down SDN_TS SGD 
+CITRIX Machines: Computer Down SDN_TS TEST;OI-RDA - ShopfloorEngine-PR3-Service Stopped 
+OI-SQL Machines: Computer Down;OI-IBS-OWI Less 5GB AND less 10 Percent 
+ADC Exchange LB RPC degraded;OI-RDA - ShopfloorEngine-PR3-Service Started 
+Application Servers Machines: Computer Down;OI-IBS-OWI Machines: Memory Utilization greater than or equal 95% 
+OI-RDA Linux Disk less 20 Percent free;CITRIX Machines: Computer Down AppV 
+CITRIX Machines: Less 5GB AND less 10 Percent;OI-IBS DB Development Less 5GB AND less 10 Percent 
+OI-IBS Exchange DB Schwenk V02;CITRIX WEM Service down 
+CITRIX VDA: D:\ Drive Free Space less than or equal 2 GB;CITRIX Machines: Computer Down SDN_TS EXT 
+CITRIX Machines: Memory Utilization greater than or equal 95%;CITRIX VDA: D:\ Drive Free Space less than or equal 2 GB 
+ADC Exchange LB Active Sync degraded;OI-IBS Backup Machines: Disk Queue greater than or equal 21 
+ADC NetScaler Schwenk;SAP-PP Machines: Memory Utilization greater than or equal 95% 
+BITZER - i00206 - Machine Down matching a custom filter;CITRIX License Service down 
+ControlUp Machines: Computer Down ControlUp;CITRIX Monitor Delivery Controller Service Down 
+OI-IBS-OWI Machines: Computer Down;SAP-PP Machines: Disk Queue greater than or equal 1 
+OI-IBS Exchange Memory / CPU Monitor;
+CITRIX Machines: Computer Down SDN_TS WW;
+SAP-PP Machine Waage;
+CITRIX Machines: Computer Down SDN_TS EXT;
+SAP-SW Service Jira Tomcat Down;
+OI-RDA - ShopfloorEngine-PR3-Service Stopped;
+OI-TC Machines: Memory Utilization greater than or equal 95%;
+VDA unregistered;
+Service Trigger GLT-Services;
+SAP-PP Less 5GB AND less 10 Percent;
+OI-TC Machines: Disk Queue greater than or equal 1;
+CITRIX Machines: Computer Down SDN_TS CN;
+CITRIX Machines: Computer Down SDN_TS ALC;
+CITRIX XenApp Restore;
+CITRIX Monitor Delivery Controller Service Up;
+CITRIX Machines: Computer Down SDN_TS SDN;
+OI-IBS Backup Machines: Computer Down;
+SAP-SW Machines: CPU greater than or equal 95%;
+OI-IBS-OWI Less 5GB AND less 10 Percent;
+Hypervisor: Memory Balooning greater than or equal 10MB (vCenter);
+OI-SQL Machines: Memory Utilization greater than or equal 95%;
+SAP-SD Machines: Computer Down;
+SAP-SW Machines: Computer Down;
+SAP-SW Machines: Memory Utilization greater than or equal 95%;
+CITRIX Machines: Computer Down AppV;
+SAP-PP Machines: Disk Queue greater than or equal 1;
+SAP-SD Machines: CPU greater than or equal 95%;
+OI-RDA Machines: Disk Queue greater than or equal 1;
+CITRIX PVS Service up;
+CITRIX Error MS RDP TS Lizenz Server;
+SAP-Basis Machines: Disk Queue greater than or equal 1;
+OI-SQL Machines: CPU greater than or equal 95%;
+SAP-Basis Machines: CPU greater than or equal 95%;
+Hypervisor: CPU Usage greater than or equal 95% (vCenter);
+SAP-Basis Less 5GB AND less 10 Percent;
+CITRIX Machines: Computer Down ROT_TS Test;
+OI-IBS Exchange DB Schwenk;
+ADC Exchange LB RPC restored;
+OI-IBS DB Development Machines: Computer Down;
+ADC: Machines Computer Down NetScaler Appliances;
+OI-RDA Machines: Memory Utilization greater than or equal 95%;
+Linux Xterm Process Ended;
+SAP-BASIS Proc ended BELLIN Client Transport.exe;
+CITRIX Machines: CPU greater than or equal 95%;
+OI-RDA Machines: Computer Down;
+ADC Storefront LB restored;
+OI-IBS Exchange Fehler Zustellung Event ID 15006 V03;
+ADC WEM Services LB restored;
+BITZER - i00206 - Machine Down a custom filter - SKZ;
+CITRIX Machines: Computer Down ROT_TS ROT;
+SAP-SD Less 5GB AND less 10 Percent;
+ESX Hypervisor Maintenance off;
+ADC Exchange LB OWA degraded;
+ADC WEM Services  LB degraded;
+OI-RDA Linux Machine Down;
+CITRIX Machines FSLogix Error;
+Linux less 5 GB;
+OI-IBS Backup Machines: Less 15 GB AND less 10 Percent;
+ADC Exchange LB Active Sync restored;
+CITRIX WEM Service up;
+OI-SQL Less 5GB AND less 10 Percent;
+CITRIX Broker cannot find any avail VM;
+CITRIX Storefront Test;
+SAP-SD Machines: Disk Queue greater than or equal 1;
+CITRIX PVS Services down;
+CITRIX Monitor Delivery Controller Service Down;
+OI-IBS-OWI Machines: Disk Queue greater than or equal 5;
+ADC  Certificate expiration warning;
+ADC Exchange LB OWA restored;
+SAP-PP Machines: CPU greater than or equal 95%;
+CITRIX License Service down;
+CITRIX Machines: Computer Down SDN_TS SYR;
+OI-TC Less 5GB AND less 10 Percent;
+OI-ROT - Xframe Service Up;
+OI-RDA Machines: CPU greater than or equal 95%;
+CITRIX WEM Service down;
+OI-IBS-OWI Machines: Memory Utilization greater than or equal 95%;
+OI-IBS Backup Machines: CPU greater than or equal 95%;
+OI-IBS Exchange Fehler Zustellung Event ID 15004;
+SAP-SW Machines: Disk Queue greater than or equal 1;
+CITRIX Machines WinLogon Error;
+SAP-SW Less 5GB AND less 10 Percent;
+VMware Horizon Connection Server Health Monitoring;
+VMware Horizon Connection Server Events;
+Citrix XenDesktop Error Events;
+VMware Horizon Connection Server Process Monitoring;

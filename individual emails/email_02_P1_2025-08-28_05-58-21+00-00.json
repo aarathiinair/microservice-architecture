@@ -1,0 +1,8 @@
+{
+  "subject": "ControlUp alert mail - Advanced Trigger -  Machine DEROT02010.bitzer.biz",
+  "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+  "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nThe monitored resource has matched the conditions specified below.\r\n\r\n\r\n     Organization Name: Bitzer\r\n\r\n\r\n     Folder name: bitzer\\citrix\\infrastructure\\upm_server\\rot\r\n\r\n\r\n     Reported by: ControlUp Monitor Service on DEROT01082\r\n\r\n\r\n     Trigger name: CITRIX Machines: Disk Queue greater than or equal 1 <controlup://incidents/CITRIX Machines: Disk Queue greater than or equal 1> \r\n\r\n\r\n     Resource name: DEROT02010 <controlup://incidents/DEROT02010> \r\n\r\n\r\n     Resource type: Computers\r\n\r\n\r\n     Stress Level: Advanced\r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/28/2025 7:58:21 AM\r\n\r\n\r\n     Columns involved in this incident:\r\n\r\n\r\n      Column: Disk Queue <controlup://incidents/Disk Queue> \r\n\r\n\r\n      Value changed from 1 to 2.1\r\n\r\n\r\n      On (UTC +2 W. Europe Standard Time): 8/28/2025 7:53:21 AM\r\n\r\n\r\n      Threshold crossed: 1\r\n\r\n1 \r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+  "priority": "P1",
+  "trigger_name": "CITRIX Machines: Disk Queue greater than or equal 1",
+  "timestamp": "2025-08-28 05:58:21+00:00"
+}

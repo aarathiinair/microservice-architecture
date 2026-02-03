@@ -1,0 +1,8 @@
+{
+  "subject": "ControlUp alert mail - Advanced Trigger -  Machine DESDN04104T.bitzer.biz",
+  "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+  "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nThe monitored resource has matched the conditions specified below.\r\n\r\n\r\n     Organization Name: Bitzer\r\n\r\n\r\n     Folder name: bitzer\\citrix\\vda\\vdi\r\n\r\n\r\n     Reported by: ControlUp Monitor Service on DESDN01097\r\n\r\n\r\n     Trigger name: CITRIX Machines: Disk Queue greater than or equal 1 <controlup://incidents/CITRIX Machines: Disk Queue greater than or equal 1> \r\n\r\n\r\n     Resource name: DESDN04104T <controlup://incidents/DESDN04104T> \r\n\r\n\r\n     Resource type: Computers\r\n\r\n\r\n     Stress Level: Advanced\r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/29/2025 6:16:40 AM\r\n\r\n\r\n     Columns involved in this incident:\r\n\r\n\r\n      Column: Disk Queue <controlup://incidents/Disk Queue> \r\n\r\n\r\n      Value changed from 0 to 2\r\n\r\n\r\n      On (UTC +2 W. Europe Standard Time): 8/29/2025 6:11:40 AM\r\n\r\n\r\n      Threshold crossed: 1\r\n\r\n1 \r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+  "priority": "P1",
+  "trigger_name": "CITRIX Machines: Disk Queue greater than or equal 1",
+  "timestamp": "2025-08-29 04:16:40+00:00"
+}

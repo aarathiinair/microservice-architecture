@@ -1,0 +1,8 @@
+{
+  "subject": "ControlUp alert mail - Machine Down -  Machine DEROT04430.bitzer.biz is down (ControlUp Agent unreachable.)",
+  "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+  "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nOne of your managed computers has disconnected from monitoring.\r\n\r\n\r\n     Organization name: Bitzer\r\n\r\n\r\n     Trigger name: CITRIX Machines: Computer Down ROT_TS ROT <controlup://incidents/CITRIX Machines: Computer Down ROT_TS ROT> \r\n\r\n\r\n     Computer name: DEROT04430 <controlup://incidents/DEROT04430> \r\n\r\n\r\n     Disconnect reason: ControlUp Agent unreachable.\r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/26/2025 3:42:33 PM\r\n\r\n\r\n\r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+  "priority": "P1",
+  "trigger_name": "CITRIX Machines: Computer Down ROT_TS ROT",
+  "timestamp": "2025-08-26 13:42:33+00:00"
+}

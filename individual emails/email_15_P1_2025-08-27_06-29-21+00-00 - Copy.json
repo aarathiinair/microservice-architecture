@@ -1,0 +1,8 @@
+{
+  "subject": "ControlUp alert mail - Process Started -  Process 3992 on DESDN01057 (SoapServer.exe)",
+  "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+  "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nA process was started on one of your managed computers.\r\n\r\n\r\n     Organization Name: Bitzer\r\n\r\n\r\n     Trigger name: CITRIX PVS Service up <controlup://incidents/CITRIX PVS Service up> \r\n\r\n\r\n     Process name: SoapServer.exe <controlup://incidents/SoapServer.exe> \r\n\r\n\r\n     Process ID: 3992\r\n\r\n\r\n     User name: BITZER\\s00228 <controlup://incidents/BITZER\\s00228> \r\n\r\n\r\n     Session ID: 0\r\n\r\n\r\n     Computer name: DESDN01057 <controlup://incidents/DESDN01057> \r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/27/2025 8:29:21 AM\r\n\r\n\r\n\r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+  "priority": "P1",
+  "trigger_name": "CITRIX PVS Service up",
+  "timestamp": "2025-08-27 06:29:21+00:00"
+}

@@ -1,0 +1,8 @@
+{
+  "subject": "ControlUp alert mail - Process Ended -  Process 3784 on DESDN01058 (StreamService.exe)",
+  "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+  "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nA process was terminated on one of your managed computers.\r\n\r\n\r\n     Organization Name: Bitzer\r\n\r\n\r\n     Trigger name: CITRIX PVS Services down <controlup://incidents/CITRIX PVS Services down> \r\n\r\n\r\n     Process name: StreamService.exe <controlup://incidents/StreamService.exe> \r\n\r\n\r\n     Process ID: 3784\r\n\r\n\r\n     User name: BITZER\\s00228 <controlup://incidents/BITZER\\s00228> \r\n\r\n\r\n     Session ID: 0\r\n\r\n\r\n     Computer name: DESDN01058 <controlup://incidents/DESDN01058> \r\n\r\n\r\n     Exit code: 0\r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/27/2025 8:59:44 AM\r\n\r\n\r\n\r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+  "priority": "P1",
+  "trigger_name": "CITRIX PVS Services down",
+  "timestamp": "2025-08-27 06:59:44+00:00"
+}

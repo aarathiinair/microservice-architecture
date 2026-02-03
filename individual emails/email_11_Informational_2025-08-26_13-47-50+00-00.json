@@ -1,0 +1,8 @@
+{
+  "subject": "ControlUp alert mail - Machine Down -  Machine DESDN16044.bitzer.biz is down (Machine shut down gracefully.)",
+  "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+  "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nOne of your managed computers has disconnected from monitoring.\r\n\r\n\r\n     Organization name: Bitzer\r\n\r\n\r\n     Trigger name: CITRIX Infrastructur Machines Computer Down Infrastructure <controlup://incidents/CITRIX Infrastructur Machines Computer Down Infrastructure> \r\n\r\n\r\n     Computer name: DESDN16044 <controlup://incidents/DESDN16044> \r\n\r\n\r\n     Disconnect reason: Machine shut down gracefully.\r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/26/2025 3:47:50 PM\r\n\r\n\r\n\r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+  "priority": "Informational",
+  "trigger_name": "CITRIX Infrastructur Machines Computer Down Infrastructure",
+  "timestamp": "2025-08-26 13:47:50+00:00"
+}

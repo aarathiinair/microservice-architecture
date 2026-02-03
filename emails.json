@@ -1,0 +1,122 @@
+[
+  {
+    "subject": "ControlUp alert mail - Advanced Trigger -  Logical Disk: C:\\ on Computer: DESDN04199.bitzer.biz.",
+    "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+    "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nThe monitored resource has matched the conditions specified below.\r\n\r\n\r\n     Organization Name: Bitzer\r\n\r\n\r\n     Folder name: bitzer\\citrix\\vda\\vdi\r\n\r\n\r\n     Reported by: ControlUp Monitor Service on DESDN01097\r\n\r\n\r\n     Trigger name: CITRIX Machines: Less 5GB AND less 10 Percent <controlup://incidents/CITRIX Machines: Less 5GB AND less 10 Percent> \r\n\r\n\r\n     Resource name: Logical Disk: C:\\ on Computer: DESDN04199.bitzer.biz. <controlup://incidents/Logical Disk: C:\\ on Computer: DESDN04199.bitzer.biz.> \r\n\r\n\r\n     Resource type: LogicalDisks\r\n\r\n\r\n     Stress Level: Advanced\r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/27/2025 12:09:29 PM\r\n\r\n\r\n     Columns involved in this incident:\r\n\r\n\r\n      Column: Free Space <controlup://incidents/Free Space> \r\n\r\n\r\n      Value changed from 5 (GB) to 4.9 (GB)\r\n\r\n\r\n      On (UTC +2 W. Europe Standard Time): 8/27/2025 12:04:29 PM\r\n\r\n\r\n      Threshold crossed: 5 (GB)\r\n\r\n\r\n      Column: % Free Space <controlup://incidents/% Free Space> \r\n\r\n\r\n      Value is 5%\r\n\r\n\r\n      On (UTC +2 W. Europe Standard Time): 8/27/2025 12:04:29 PM\r\n\r\n\r\n      Threshold crossed: 10%\r\n\r\n% \r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+    "priority": "P2",
+    "trigger_name": "CITRIX Machines: Less 5GB AND less 10 Percent",
+    "timestamp": "2025-08-27 10:09:29+00:00"
+  },
+  {
+    "subject": "ControlUp alert mail - Advanced Trigger -  Machine DEROT02010.bitzer.biz",
+    "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+    "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nThe monitored resource has matched the conditions specified below.\r\n\r\n\r\n     Organization Name: Bitzer\r\n\r\n\r\n     Folder name: bitzer\\citrix\\infrastructure\\upm_server\\rot\r\n\r\n\r\n     Reported by: ControlUp Monitor Service on DEROT01082\r\n\r\n\r\n     Trigger name: CITRIX Machines: Disk Queue greater than or equal 1 <controlup://incidents/CITRIX Machines: Disk Queue greater than or equal 1> \r\n\r\n\r\n     Resource name: DEROT02010 <controlup://incidents/DEROT02010> \r\n\r\n\r\n     Resource type: Computers\r\n\r\n\r\n     Stress Level: Advanced\r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/28/2025 7:58:21 AM\r\n\r\n\r\n     Columns involved in this incident:\r\n\r\n\r\n      Column: Disk Queue <controlup://incidents/Disk Queue> \r\n\r\n\r\n      Value changed from 1 to 2.1\r\n\r\n\r\n      On (UTC +2 W. Europe Standard Time): 8/28/2025 7:53:21 AM\r\n\r\n\r\n      Threshold crossed: 1\r\n\r\n1 \r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+    "priority": "P1",
+    "trigger_name": "CITRIX Machines: Disk Queue greater than or equal 1",
+    "timestamp": "2025-08-28 05:58:21+00:00"
+  },
+  {
+    "subject": "ControlUp alert mail - Advanced Trigger -  Machine DEROT04414.bitzer.biz",
+    "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+    "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nThe monitored resource has matched the conditions specified below.\r\n\r\n\r\n     Organization Name: Bitzer\r\n\r\n\r\n     Folder name: bitzer\\citrix\\vda\\rot_ts\\rot\r\n\r\n\r\n     Reported by: ControlUp Monitor Service on DEROT01082\r\n\r\n\r\n     Trigger name: CITRIX Machines: Disk Queue greater than or equal 1 <controlup://incidents/CITRIX Machines: Disk Queue greater than or equal 1> \r\n\r\n\r\n     Resource name: DEROT04414 <controlup://incidents/DEROT04414> \r\n\r\n\r\n     Resource type: Computers\r\n\r\n\r\n     Stress Level: Advanced\r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/28/2025 8:00:09 AM\r\n\r\n\r\n     Columns involved in this incident:\r\n\r\n\r\n      Column: Disk Queue <controlup://incidents/Disk Queue> \r\n\r\n\r\n      Value changed from 0.8 to 1.3\r\n\r\n\r\n      On (UTC +2 W. Europe Standard Time): 8/28/2025 7:55:09 AM\r\n\r\n\r\n      Threshold crossed: 1\r\n\r\n1 \r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+    "priority": "P1",
+    "trigger_name": "CITRIX Machines: Disk Queue greater than or equal 1",
+    "timestamp": "2025-08-28 06:00:09+00:00"
+  },
+  {
+    "subject": "ControlUp alert mail - Advanced Trigger -  Machine DEROT04420.bitzer.biz",
+    "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+    "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nThe monitored resource has matched the conditions specified below.\r\n\r\n\r\n     Organization Name: Bitzer\r\n\r\n\r\n     Folder name: bitzer\\citrix\\vda\\rot_ts\\rot\r\n\r\n\r\n     Reported by: ControlUp Monitor Service on DEROT01082\r\n\r\n\r\n     Trigger name: CITRIX Machines: Disk Queue greater than or equal 1 <controlup://incidents/CITRIX Machines: Disk Queue greater than or equal 1> \r\n\r\n\r\n     Resource name: DEROT04420 <controlup://incidents/DEROT04420> \r\n\r\n\r\n     Resource type: Computers\r\n\r\n\r\n     Stress Level: Advanced\r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/27/2025 12:19:01 PM\r\n\r\n\r\n     Columns involved in this incident:\r\n\r\n\r\n      Column: Disk Queue <controlup://incidents/Disk Queue> \r\n\r\n\r\n      Value changed from 0 to 2.4\r\n\r\n\r\n      On (UTC +2 W. Europe Standard Time): 8/27/2025 12:14:01 PM\r\n\r\n\r\n      Threshold crossed: 1\r\n\r\n1 \r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+    "priority": "P1",
+    "trigger_name": "CITRIX Machines: Disk Queue greater than or equal 1",
+    "timestamp": "2025-08-27 10:19:01+00:00"
+  },
+  {
+    "subject": "ControlUp alert mail - Advanced Trigger -  Machine DEROT04428.bitzer.biz",
+    "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+    "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nThe monitored resource has matched the conditions specified below.\r\n\r\n\r\n     Organization Name: Bitzer\r\n\r\n\r\n     Folder name: bitzer\\citrix\\vda\\rot_ts\\rot\r\n\r\n\r\n     Reported by: ControlUp Monitor Service on DEROT01082\r\n\r\n\r\n     Trigger name: CITRIX Machines: Disk Queue greater than or equal 1 <controlup://incidents/CITRIX Machines: Disk Queue greater than or equal 1> \r\n\r\n\r\n     Resource name: DEROT04428 <controlup://incidents/DEROT04428> \r\n\r\n\r\n     Resource type: Computers\r\n\r\n\r\n     Stress Level: Advanced\r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/29/2025 6:50:28 AM\r\n\r\n\r\n     Columns involved in this incident:\r\n\r\n\r\n      Column: Disk Queue <controlup://incidents/Disk Queue> \r\n\r\n\r\n      Value changed from 1 to 1.6\r\n\r\n\r\n      On (UTC +2 W. Europe Standard Time): 8/29/2025 6:45:28 AM\r\n\r\n\r\n      Threshold crossed: 1\r\n\r\n1 \r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+    "priority": "P1",
+    "trigger_name": "CITRIX Machines: Disk Queue greater than or equal 1",
+    "timestamp": "2025-08-29 04:50:28+00:00"
+  },
+  {
+    "subject": "ControlUp alert mail - Advanced Trigger -  Machine DESDN04104T.bitzer.biz",
+    "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+    "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nThe monitored resource has matched the conditions specified below.\r\n\r\n\r\n     Organization Name: Bitzer\r\n\r\n\r\n     Folder name: bitzer\\citrix\\vda\\vdi\r\n\r\n\r\n     Reported by: ControlUp Monitor Service on DESDN01097\r\n\r\n\r\n     Trigger name: CITRIX Machines: Disk Queue greater than or equal 1 <controlup://incidents/CITRIX Machines: Disk Queue greater than or equal 1> \r\n\r\n\r\n     Resource name: DESDN04104T <controlup://incidents/DESDN04104T> \r\n\r\n\r\n     Resource type: Computers\r\n\r\n\r\n     Stress Level: Advanced\r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/29/2025 6:16:40 AM\r\n\r\n\r\n     Columns involved in this incident:\r\n\r\n\r\n      Column: Disk Queue <controlup://incidents/Disk Queue> \r\n\r\n\r\n      Value changed from 0 to 2\r\n\r\n\r\n      On (UTC +2 W. Europe Standard Time): 8/29/2025 6:11:40 AM\r\n\r\n\r\n      Threshold crossed: 1\r\n\r\n1 \r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+    "priority": "P1",
+    "trigger_name": "CITRIX Machines: Disk Queue greater than or equal 1",
+    "timestamp": "2025-08-29 04:16:40+00:00"
+  },
+  {
+    "subject": "ControlUp alert mail - Machine Down -  Machine DEROT04430.bitzer.biz is down (ControlUp Agent unreachable.)",
+    "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+    "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nOne of your managed computers has disconnected from monitoring.\r\n\r\n\r\n     Organization name: Bitzer\r\n\r\n\r\n     Trigger name: CITRIX Machines: Computer Down ROT_TS ROT <controlup://incidents/CITRIX Machines: Computer Down ROT_TS ROT> \r\n\r\n\r\n     Computer name: DEROT04430 <controlup://incidents/DEROT04430> \r\n\r\n\r\n     Disconnect reason: ControlUp Agent unreachable.\r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/26/2025 3:42:33 PM\r\n\r\n\r\n\r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+    "priority": "P1",
+    "trigger_name": "CITRIX Machines: Computer Down ROT_TS ROT",
+    "timestamp": "2025-08-26 13:42:33+00:00"
+  },
+  {
+    "subject": "ControlUp alert mail - Machine Down -  Machine DESDN01058.bitzer.biz is down (Machine shut down gracefully.)",
+    "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+    "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nOne of your managed computers has disconnected from monitoring.\r\n\r\n\r\n     Organization name: Bitzer\r\n\r\n\r\n     Trigger name: CITRIX Infrastructur Machines Computer Down Infrastructure <controlup://incidents/CITRIX Infrastructur Machines Computer Down Infrastructure> \r\n\r\n\r\n     Computer name: DESDN01058 <controlup://incidents/DESDN01058> \r\n\r\n\r\n     Disconnect reason: Machine shut down gracefully.\r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/27/2025 9:01:39 AM\r\n\r\n\r\n\r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+    "priority": "Informational",
+    "trigger_name": "CITRIX Infrastructur Machines Computer Down Infrastructure",
+    "timestamp": "2025-08-27 07:01:39+00:00"
+  },
+  {
+    "subject": "ControlUp alert mail - Machine Down -  Machine DESDN01542.bitzer.biz is down (Machine shut down gracefully.)",
+    "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+    "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nOne of your managed computers has disconnected from monitoring.\r\n\r\n\r\n     Organization name: Bitzer\r\n\r\n\r\n     Trigger name: CITRIX Infrastructur Machines Computer Down Infrastructure <controlup://incidents/CITRIX Infrastructur Machines Computer Down Infrastructure> \r\n\r\n\r\n     Computer name: DESDN01542 <controlup://incidents/DESDN01542> \r\n\r\n\r\n     Disconnect reason: Machine shut down gracefully.\r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/28/2025 7:37:15 AM\r\n\r\n\r\n\r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+    "priority": "Informational",
+    "trigger_name": "CITRIX Infrastructur Machines Computer Down Infrastructure",
+    "timestamp": "2025-08-28 05:37:15+00:00"
+  },
+  {
+    "subject": "ControlUp alert mail - Machine Down -  Machine DESDN01543.bitzer.biz is down (Machine shut down gracefully.)",
+    "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+    "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nOne of your managed computers has disconnected from monitoring.\r\n\r\n\r\n     Organization name: Bitzer\r\n\r\n\r\n     Trigger name: CITRIX Infrastructur Machines Computer Down Infrastructure <controlup://incidents/CITRIX Infrastructur Machines Computer Down Infrastructure> \r\n\r\n\r\n     Computer name: DESDN01543 <controlup://incidents/DESDN01543> \r\n\r\n\r\n     Disconnect reason: Machine shut down gracefully.\r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/28/2025 7:51:53 AM\r\n\r\n\r\n\r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+    "priority": "Informational",
+    "trigger_name": "CITRIX Infrastructur Machines Computer Down Infrastructure",
+    "timestamp": "2025-08-28 05:51:53+00:00"
+  },
+  {
+    "subject": "ControlUp alert mail - Machine Down -  Machine DESDN16044.bitzer.biz is down (Machine shut down gracefully.)",
+    "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+    "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nOne of your managed computers has disconnected from monitoring.\r\n\r\n\r\n     Organization name: Bitzer\r\n\r\n\r\n     Trigger name: CITRIX Infrastructur Machines Computer Down Infrastructure <controlup://incidents/CITRIX Infrastructur Machines Computer Down Infrastructure> \r\n\r\n\r\n     Computer name: DESDN16044 <controlup://incidents/DESDN16044> \r\n\r\n\r\n     Disconnect reason: Machine shut down gracefully.\r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/26/2025 3:47:50 PM\r\n\r\n\r\n\r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+    "priority": "Informational",
+    "trigger_name": "CITRIX Infrastructur Machines Computer Down Infrastructure",
+    "timestamp": "2025-08-26 13:47:50+00:00"
+  },
+  {
+    "subject": "ControlUp alert mail - Process Ended -  Process 3784 on DESDN01058 (StreamService.exe)",
+    "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+    "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nA process was terminated on one of your managed computers.\r\n\r\n\r\n     Organization Name: Bitzer\r\n\r\n\r\n     Trigger name: CITRIX PVS Services down <controlup://incidents/CITRIX PVS Services down> \r\n\r\n\r\n     Process name: StreamService.exe <controlup://incidents/StreamService.exe> \r\n\r\n\r\n     Process ID: 3784\r\n\r\n\r\n     User name: BITZER\\s00228 <controlup://incidents/BITZER\\s00228> \r\n\r\n\r\n     Session ID: 0\r\n\r\n\r\n     Computer name: DESDN01058 <controlup://incidents/DESDN01058> \r\n\r\n\r\n     Exit code: 0\r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/27/2025 8:59:44 AM\r\n\r\n\r\n\r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+    "priority": "P1",
+    "trigger_name": "CITRIX PVS Services down",
+    "timestamp": "2025-08-27 06:59:44+00:00"
+  },
+  {
+    "subject": "ControlUp alert mail - Process Started -  Process 3764 on DESDN01058 (SoapServer.exe)",
+    "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+    "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nA process was started on one of your managed computers.\r\n\r\n\r\n     Organization Name: Bitzer\r\n\r\n\r\n     Trigger name: CITRIX PVS Service up <controlup://incidents/CITRIX PVS Service up> \r\n\r\n\r\n     Process name: SoapServer.exe <controlup://incidents/SoapServer.exe> \r\n\r\n\r\n     Process ID: 3764\r\n\r\n\r\n     User name: BITZER\\s00228 <controlup://incidents/BITZER\\s00228> \r\n\r\n\r\n     Session ID: 0\r\n\r\n\r\n     Computer name: DESDN01058 <controlup://incidents/DESDN01058> \r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/27/2025 9:04:00 AM\r\n\r\n\r\n\r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+    "priority": "P1",
+    "trigger_name": "CITRIX PVS Service up",
+    "timestamp": "2025-08-27 07:04:00+00:00"
+  },
+  {
+    "subject": "ControlUp alert mail - Process Started -  Process 3976 on DESDN01057 (StreamService.exe)",
+    "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+    "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nA process was started on one of your managed computers.\r\n\r\n\r\n     Organization Name: Bitzer\r\n\r\n\r\n     Trigger name: CITRIX PVS Service up <controlup://incidents/CITRIX PVS Service up> \r\n\r\n\r\n     Process name: StreamService.exe <controlup://incidents/StreamService.exe> \r\n\r\n\r\n     Process ID: 3976\r\n\r\n\r\n     User name: BITZER\\s00228 <controlup://incidents/BITZER\\s00228> \r\n\r\n\r\n     Session ID: 0\r\n\r\n\r\n     Computer name: DESDN01057 <controlup://incidents/DESDN01057> \r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/27/2025 8:29:21 AM\r\n\r\n\r\n\r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+    "priority": "P1",
+    "trigger_name": "CITRIX PVS Service up",
+    "timestamp": "2025-08-27 06:29:21+00:00"
+  },
+  {
+    "subject": "ControlUp alert mail - Process Started -  Process 3992 on DESDN01057 (SoapServer.exe)",
+    "sender": "\"ControlUp@bitzer.de\" <ControlUp@bitzer.de>",
+    "body": "This is an automated alert from ControlUp, which you requested to receive using an incident trigger. \r\n\r\n\t\r\nA process was started on one of your managed computers.\r\n\r\n\r\n     Organization Name: Bitzer\r\n\r\n\r\n     Trigger name: CITRIX PVS Service up <controlup://incidents/CITRIX PVS Service up> \r\n\r\n\r\n     Process name: SoapServer.exe <controlup://incidents/SoapServer.exe> \r\n\r\n\r\n     Process ID: 3992\r\n\r\n\r\n     User name: BITZER\\s00228 <controlup://incidents/BITZER\\s00228> \r\n\r\n\r\n     Session ID: 0\r\n\r\n\r\n     Computer name: DESDN01057 <controlup://incidents/DESDN01057> \r\n\r\n\r\n     Incident timestamp (UTC +2 W. Europe Standard Time): 8/27/2025 8:29:21 AM\r\n\r\n\r\n\r\nIn order to configure which e-mail alerts you receive, please open ControlUp and edit the settings for the trigger specified above.",
+    "priority": "P1",
+    "trigger_name": "CITRIX PVS Service up",
+    "timestamp": "2025-08-27 06:29:21+00:00"
+  }
+]

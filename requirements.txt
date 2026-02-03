@@ -1,0 +1,14 @@
+# Core Dependencies
+python-dotenv>=1.0.0
+jira>=3.5.0
+requests>=2.31.0
+aiohttp>=3.9.0
+
+# RabbitMQ Support (optional - for future use)
+aio-pika>=9.3.0
+
+# Async Support
+asyncio>=3.4.3
+
+# Logging and Utilities
+typing-extensions>=4.8.0
